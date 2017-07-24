@@ -1,0 +1,901 @@
+<ul id="slide-out" class="side-nav fixed">
+
+    <h5 class="header">Шпаргалка по аксессуарам</h5>
+
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">settings_applications</i>Охлаждение</div>
+            <div class="collapsible-body"><span>Охлаждение бывает двух видов: активное и пассивное. Основное отличие в том что при активном компрессор не работает. Активное охлаждение осуществляется с помощтю блока HPAC40. Пассивное - CS44.</span>
+            </div>
+        </li>
+
+        <li>
+            <div class="collapsible-header"><i class="material-icons">settings_applications</i>Теплые полы</div>
+            <div class="collapsible-body"><span>Для полов лучше всего подойдет ECS 41.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">settings_applications</i>Бассейн</div>
+            <div class="collapsible-body"><span><Бассейн греть с помощью POOL40.</span></div>
+        </li>
+    </ul>
+    <div class="carousel">
+        <a class="carousel-item" ng-repeat="acc in system.system.mypump.accessorize" ng-click="show()" ng-model="acc">{{
+            acc }}<img src="img/{{ acc }}.png"></a>
+    </div>
+
+
+
+
+
+
+
+</ul>
+
+<div class="main">
+
+    <h5 class="header">Ваша система:</h5>
+
+    <div class="print">
+    <ul class="connectedSortable collapsible" id="sortable1">
+        <li class="ui-state-default" >
+            <div class="collapsible-header" ng-click="chooseAcc($index)">
+                <div class="material-icons">
+                </div>
+                NIBE F <span id="pump">{{ system.system.mypump.model }}</span> - {{ system.system.mypump.power }}
+                <span class="badge"><span>{{ system.system.mypump.cost }}</span>  euro</span>
+            </div>
+            <div class="collapsible-body">
+                <p>
+
+
+                    <!-- начало А4 -->
+
+
+
+                <div id="printSectionId">
+                    <div id="page1-div" style="position:relative;width:892px;height:1262px;">
+                        <img width="892" height="1262" src="img/o_78474e4142f09a2d001.png" alt="background image"/>
+
+                        <div>
+                            <p style="position:absolute;top:30px;left:500px;white-space:nowrap" class="ft00"
+                               id="draggable"><a href="#" editable-textarea="prodavec" e-rows="40" e-cols="40">{{prodavec}}</a>&#160;
+                            </p>
+
+                            <p style="position:absolute;top:80px;left:80px;white-space:nowrap" class="ft00"
+                               id="draggable">ГЕОТЕРМАЛЬНЫЙ ТЕПЛОВОЙ
+                                НАСОС&#160;</p>
+
+                            <p style="position:absolute;top:107px;left:80px;white-space:nowrap" class="ft01 ng-hide"
+                               id="draggable1"
+                               ng-show="(system.system.mypump.model == 1245 || system.system.mypump.model == 1255 || system.system.mypump.model == 1226)">
+                                Отопление и нагрев горячей воды в одном корпусе</p>
+
+                            <p style="position:absolute;top:135px;left:80px;white-space:nowrap" class="ft01"
+                               id="draggable2">NIBE ™</p>
+
+
+                            <p style="position:absolute;top:135px;left:156px;white-space:nowrap" class="ft03"
+                               id="draggable9">F{{
+                                system.system.mypump.model }} - {{ system.system.mypump.power }}</p>
+
+                            <p style="position:absolute;top:184px;left:460px;white-space:nowrap" class="ft00"
+                               id="draggable3">Особенности</p>
+
+                            <div style="position:absolute;top:218px;left:410px;width:29em;" id="draggable4">
+                                <ul>
+                                    <div ng-repeat="desc in description[0].seconddescription">
+                                        <li><p class="ft04"><a href="#" editable-textarea="desc" e-rows="40"
+                                                               e-cols="40">&#9679; {{desc}}</a></p>
+                                        <li>
+                                    </div>
+                                </ul>
+                            </div>
+
+
+                            <table style="position:absolute;top:700px;left:40px;width:24em;" id="draggable5"
+                                   class="ft04">
+                                <thead>
+                                <tr>
+
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td style="width:24em;">COP при 0/35</td>
+                                    <td>{{ system.system.mypump.cop035}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Электрическая мощность при 0/35</td>
+                                    <td> {{ system.system.mypump.electric035}} кВт</td>
+                                </tr>
+                                <tr>
+                                    <td>Мощность тепловая при 0/35</td>
+                                    <td>{{ system.system.mypump.power035}} кВт</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+
+                            <p style="position:absolute;top:880px;left:461px;white-space:nowrap" class="ft06"
+                               id="draggable6"><b>NIBE F{{
+                                system.system.mypump.model }}</b></p>
+
+                            <div style="position:absolute;top:920px;left:40px;width:45em;" id="draggable7" rows="5"
+                                 cols="20">
+                                <p ng-repeat="main in description[0].maindescription" class="ft05"><a href="#"
+                                                                                                      editable-textarea="main"
+                                                                                                      e-rows="40"
+                                                                                                      e-cols="40">{{main}}</a>
+                                </p>
+                            </div>
+
+                            <p style="position:absolute;top:205px;left:83px;white-space:nowrap" class="ft00"
+                               id="draggable8"><img
+                                    src="img/{{ system.system.mypump.model }}.lq.png" width="300px"></p>
+
+                            <p style="position:absolute;top:1170px;left:63px;white-space:nowrap" class="ft00"
+                               id="draggable12"><img
+                                    src="img/icon/Chauffage.png" width="60px"></p>
+
+                            <p style="position:absolute;top:1170px;left:163px;white-space:nowrap" class="ft00"
+                               id="draggable13"><img
+                                    src="img/icon/ECS.png" width="60px"></p>
+
+                            <p style="position:absolute;top:1170px;left:263px;white-space:nowrap" class="ft00"
+                               id="draggable14"><img
+                                    src="img/icon/pool.png" width="60px"></p>
+
+                            <p style="position:absolute;top:1170px;left:363px;white-space:nowrap" class="ft00"
+                               id="draggable15"><img
+                                    src="img/icon/Rafraichissement.png" width="60px"></p>
+
+                            <p style="position:absolute;top:1170px;left:463px;white-space:nowrap" class="ft00"
+                               id="draggable16"><img
+                                    src="img/icon/solar.png" width="60px"></p>
+
+                            <p style="position:absolute;top:1170px;left:563px;white-space:nowrap" class="ft00"
+                               id="draggable17"><img
+                                    src="img/icon/Ventilation.png" width="60px"></p>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- конец А4 -->
+
+
+                </div>
+
+
+                </span>
+
+
+            </div>
+        </li>
+    </ul>
+</div>
+
+    <ul class="ccollapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Всего:<span class="badge">{{ total}}  euro</span>
+            </div>
+
+        </li>
+    </ul>
+
+
+    <h6 class="header">Выберите дополнительное оборудование</h6>
+
+
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Аксессуары NIBE</div>
+            <div class="collapsible-body">
+
+
+                <div class="row">
+                    <div class="col s12 m10 l10">
+                        <h6 class="header">Аксесуары NIBE подходящие для выбранного теплонасоса</h6>
+
+                        <ul class="connectedSortable collapsible" id="sortable4">
+                            <li ng-repeat="acc in descacc" class="ui-state-default" ng-click="chooseAcc($index)">
+
+                                <div class="collapsible-header" id="{{$index}}">
+                                    <div class="material-icons">
+                                    </div>
+                                    <span>{{acc.model}}</span> <span class="badge">{{acc.price}}  euro</span>
+                                </div>
+                                <div class="collapsible-body">
+                                    <a class="waves-effect waves-light btn" ng-click="useItAcc()">Использовать</a><br>
+
+                                    <div id="print{{$index}}" style="position:relative;width:892px;height:631px;">
+                                        <img width="892" height="631" src="img/fonAxx.png" alt="background image"/>
+
+                                        <div>
+                                            <p style="position:absolute;top:30px;left:500px;white-space:nowrap"
+                                               class="ft00" id="draggable18"><a href="#" editable-textarea="prodavec"
+                                                                              e-rows="40" e-cols="40">{{prodavec}}</a>&#160;
+                                            </p>
+
+                                            <p style="position:absolute;top:80px;left:80px;white-space:nowrap"
+                                               class="ft00" id="draggable19">ДОПОЛНИТЕЛЬНЫЙ АКСЕССУАР&#160;</p>
+
+
+                                            <p style="position:absolute;top:135px;left:80px;white-space:nowrap"
+                                               class="ft01" id="draggable20">NIBE ™</p>
+
+
+                                            <p style="position:absolute;top:135px;left:156px;white-space:nowrap"
+                                               class="ft03" id="draggable21">{{acc.model}}</p>
+
+
+                                            <p style="position:absolute;top:184px;left:460px;white-space:nowrap"
+                                               class="ft00" id="draggable22">Особенности</p>
+
+                                            <div style="position:absolute;top:218px;left:410px;width:29em;"
+                                                 id="draggable23">
+                                                <ul>
+                                                    <div ng-repeat="punkt in acc.descriptionru">
+                                                        <li><p class="ft04"><a href="#" editable-textarea="punkt"
+                                                                               e-rows="40" e-cols="40">&#9679;
+                                                            {{punkt}}</a></p>
+                                                        <li>
+                                                    </div>
+                                                </ul>
+                                            </div>
+
+                                            <p style="position:absolute;top:300px;left:60px;white-space:nowrap"
+                                               class="ft00" id="draggable24"><img
+                                                    src="img/{{ acc.model }}.png" width="200px"></p>
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                </span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>бойлера</div>
+            <div class="collapsible-body"><span>Бойлера которые мы рекомендуем для использования совместно с тепловым насосом.</span>
+
+
+                <ul class="connectedSortable collapsible" id="sortable5">
+                    <li ng-repeat="boil in Boilers" class="ui-state-default" ng-click="chooseAcc($index)">
+
+                        <div class="collapsible-header" id="b{{$index}}">
+                            <div class="material-icons">
+                            </div>
+                            <span>{{boil.model}}</span> <span class="badge">{{boil.cost}}  euro</span>
+                        </div>
+                        <div class="collapsible-body">
+
+                            <a class="waves-effect waves-light btn" ng-click="useItBoil()">Использовать</a>
+                            <br>
+                            <div id="printb{{$index}}" style="position:relative;width:892px;height:631px;">
+                                <img width="892" height="631" src="img/fonAxx.png" alt="background image"/>
+
+                                <div>
+                                    <p style="position:absolute;top:30px;left:500px;white-space:nowrap" class="ft00"
+                                       id="draggable25"><a href="#" editable-textarea="prodavec" e-rows="40" e-cols="40">{{prodavec}}</a>&#160;
+                                    </p>
+
+                                    <p style="position:absolute;top:80px;left:80px;white-space:nowrap" class="ft00"
+                                       id="draggable26">БОЙЛЕР ГОРЯЧЕЙ ВОДЫ&#160;</p>
+
+
+                                    <p style="position:absolute;top:135px;left:80px;white-space:nowrap" class="ft01"
+                                       id="draggable27">NIBE ™</p>
+
+
+                                    <p style="position:absolute;top:135px;left:156px;white-space:nowrap" class="ft03"
+                                       id="draggable28">{{boil.model}}</p>
+
+
+                                    <p style="position:absolute;top:418px;left:460px;white-space:nowrap" class="ft00"
+                                       id="draggable29">Характеристики {{boil.model}}</p>
+
+                                    <div style="position:absolute;top:450px;left:420px;width:29em;" id="draggabl304">
+                                        <ul>
+                                            <div ng-repeat="punkt2 in boil. haracteristiki">
+                                                <li><p class="ft04"><a href="#" editable-textarea="punkt2" e-rows="40"
+                                                                       e-cols="40">&#9679; {{punkt2}}</a></p>
+                                                <li>
+                                            </div>
+                                        </ul>
+                                    </div>
+
+                                    <p style="position:absolute;top:200px;left:60px;white-space:nowrap" class="ft00"
+                                       id="draggable31"><img
+                                            src="img/UKV-group.png" width="300px"></p>
+
+
+                                    <p style="position:absolute;top:70px;left:420px;width:32em" class="ft04">
+                                        {{boil.description}}</p>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Другое</div>
+            <div class="collapsible-body">
+
+                <span>Здесь будут представлены комлпектующие которые Вы сами будете создавать</span>
+                <a class="waves-effect waves-light btn" ng-click="addOwn()">Добавить еще</a>
+
+                <ul class="connectedSortable collapsible" id="sortable3">
+                    <li ng-repeat="some in somethings" class="ui-state-default" ng-click="chooseAcc($index)">
+
+                        <div class="collapsible-header" id="o{{$index}}">
+                            <div class="material-icons">
+                            </div>
+                            <span>{{some.model}}</span> <span class="badge"><a href="#" editable-textarea="some.cost" e-rows="40" e-cols="40">{{some.cost}}</a> euro</span>
+                        </div>
+                        <div class="collapsible-body">
+
+                            <a class="waves-effect waves-light btn" ng-click="useItOwn()">Использовать</a>
+
+                            <br>
+                            <div id="printo{{$index}}" style="position:relative;width:892px;height:631px;">
+                                <img width="892" height="631" src="img/fonAxx.png" alt="background image"/>
+
+                                <div>
+
+                                    <p style="position:absolute;top:30px;left:500px;white-space:nowrap" class="ft00"
+                                       id="draggable32"><a href="#" editable-textarea="prodavec" e-rows="40" e-cols="40">{{prodavec}}</a>&#160;
+                                    </p>
+
+                                    <p style="position:absolute;top:80px;left:80px;white-space:nowrap" class="ft00"
+                                       id="draggable33"><a href="#" editable-text="some.whatis">{{some.whatis}}</a>&#160;</p>
+
+
+                                    <p style="position:absolute;top:135px;left:80px;white-space:nowrap" class="ft01"
+                                       id="draggable34"><a href="#" editable-text="some.brand">{{some.brand}}</a></p>
+
+
+                                    <p style="position:absolute;top:135px;left:156px;white-space:nowrap" class="ft03"
+                                       id="draggable35"><a href="#" editable-text="some.model">{{some.model}}</a></p>
+
+
+                                    <p style="position:absolute;top:118px;left:460px;white-space:nowrap" class="ft00"
+                                       id="draggable36">Описание {{some.model}}</p>
+
+                                    <div style="position:absolute;top:450px;left:420px;width:29em;" id="draggable37">
+
+                                    </div>
+
+                                    <p id="draggable38" style="position:absolute;top:200px;left:60px;white-space:nowrap" class="ft00">
+
+
+
+
+                                        <img id="resizePic"
+                                            src="upload_/{{photo}}" width="300px" height="300px"></p>
+
+                                    <!--  начало модуля загрузки  -->
+
+                                    <p>
+                                        <input type="checkbox" ng-model="myVar" id="test5" />
+                                        <label for="test5">Загрузить фото</label>
+                                    </p>
+
+
+
+
+                                    <div class="row" ng-show="myVar" style="position: relative; z-index: 1000;">
+                                        <div class="col s12 m5">
+                                            <div class="card-panel red lighten-5">
+
+
+                                                <div class="row">
+                                                    <div class="well">
+                                                        <h4>Загрузите файлы</h4>
+                                                        <p class="lead">
+                                                        <form role="form">
+                                                            <div class="row">
+
+                                                                <div class="input-field col s12">
+
+                                                                    <select id="subdir">
+                                                                        <option>Бойлера</option>
+                                                                        <option>Насосы</option>
+                                                                        <option>другое</option>
+                                                                    </select>
+                                                                    <label for="subdir">Что это?</label>
+                                                                </div>
+
+
+                                                                <div class="form-group col-xs-7">
+                                                                    <label for="comments">Комментарий (необязательно)</label>
+                                                                    <input type="text" class="form-control" id="comments" placeholder="введите комментарий">
+                                                                </div>
+                                                                <div class="form-group col-xs-1">
+                                                                    <label for="uniqueFilename">Уникальное имя</label>
+                                                                    <input type="checkbox" class="form-control" id="uniqueFilename">
+                                                                </div>
+                                                            </div>
+
+
+
+
+
+                                                            <div class="file-field input-field">
+                                                                <div class="btn">
+
+                                                                    <span>файл</span>
+                                                                    <input type="file" id="file"  name="file" onchange="angular.element(this).scope().fileNameChanged(this)">
+                                                                </div>
+                                                                <div class="file-path-wrapper">
+                                                                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                                </div>
+                                                            </div>
+
+                                                            <br><br><button type="button" class="btn btn-success" ng-click="uploadFiles()">Загрузить</button>
+                                                        </form>
+                                                        </p>
+                                                    </div>
+
+
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                    <!--  конец модуля загрузки  -->
+
+
+                                    <p style="position:absolute;top:150px;left:420px;width:20em" class="ft00"><a href="#" editable-textarea="some.description" id="draggable39" e-rows="50" e-cols="50">{{some.description}}</a>
+                                        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </li>
+
+
+                </ul>
+
+
+
+
+
+
+
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Работы по монтажу топочной и обвязочыне материалы</div>
+            <div class="collapsible-body"><span>Необходимо выбрать вид предоставляемых услуг.</span>
+
+
+                <ul class="connectedSortable collapsible" id="sortable6" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Монтажыне
+                            работы<span class="badge" id="work">{{system.system.mypump.workprice}} euro</span></div>
+
+                        <div class="collapsible-body">
+
+
+                            <a class="waves-effect waves-light btn"  ng-click="useItWork()">Использовать</a>
+
+
+
+                            <span>Рекомендуемая стоимость монтажа данной модели теплонасоса составляет {{system.system.mypump.workprice}} euro. Когда вы перенесете данный вид услуг в Вашу систему, стоимость измениться так как будет учтена стоимость монтажа каждого из выбранных Вами акессуаров и бойлеров. Вам решать сколько Вы хотите заработать на монтаже!</span>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Стоимость материалов для обвязки топочной
+                            работы<span class="badge" id="mat">{{system.system.mypump.materialcost}} euro</span></div>
+
+                        <div class="collapsible-body">
+
+
+                            <a class="waves-effect waves-light btn"  ng-click="useItMat()">Использовать</a>
+
+
+
+                            <span>Примерная стоимость обвязочных материалов для монтажа данного теплонасоса составляет {{system.system.mypump.materialcost}} euro. </span>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Шефмонтаж<span
+                                class="badge">{{ 200 }}  euro</span></div>
+                        <div class="collapsible-body"><span>Пусть заказчик монтирует тепловой насос сам, но под Вашим четким руководством.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Работы без
+                            гарантии и обслуживания<span
+                                    class="badge"> {{system.system.mypump.workprice * 0.8}} euro</span></div>
+                        <div class="collapsible-body"><span>Иногда заказчик хочет сэкономить на всем. Предлагайте скидки на работы но без предоставления гарантии на монтажные работы.</span>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+
+
+        </li>
+
+        <li>
+            <div class="collapsible-header" ng-click="calc()"><i class="material-icons">whatshot</i>Грунтовой контур
+            </div>
+            <div class="collapsible-body"><span>Выберите тип грунтового контура.</span>
+
+
+                <ul class="connectedSortable collapsible" id="sortable2" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Вертикальные
+                            скважины<span class="badge">{{ GeoVertPrice | number:0}}  euro</span></div>
+                        <div class="collapsible-body"><span>Отредактируйте стоимость трубы, бурения, работ и материалов, с учетом нюансов конкретного объекта
+
+
+
+
+                                 <div id="page5-div" style="position:relative;width:892px;height:631px;">
+                                     <img width="892" height="631" src="img/fonAxx.png" alt="background image"/>
+
+                                     <div>
+
+                                         <p style="position:absolute;top:100px;left:90px;white-space:nowrap"
+                                            class="ft00" id="draggable38"><img
+                                                 src="img/geo6.png" width="700px"></p>
+
+                                         <p style="position:absolute;top:30px;left:500px;white-space:nowrap"
+                                            class="ft00" id="draggable39"><a href="#" editable-textarea="prodavec"
+                                                                           e-rows="40" e-cols="40">{{prodavec}}</a>&#160;
+                                         </p>
+
+                                         <p style="position:absolute;top:30px;left:80px;white-space:nowrap" class="ft00"
+                                            id="draggable49">ГРУНТОВОЙ КОНТУР&#160;</p>
+
+
+                                         <p style="position:absolute;top:60px;left:80px;white-space:nowrap" class="ft01"
+                                            id="draggable41">Для теплового насоса NIBE ™</p>
+
+
+                                         <p style="position:absolute;top:135px;left:156px;white-space:nowrap"
+                                            class="ft03" id="draggable42">{{acc.model}}</p>
+
+
+                                         <p style="position:absolute;top:100px;left:360px;white-space:nowrap"
+                                            class="ft00" id="draggable43">Стоимость:</p>
+
+                                         <div style="position:absolute;top:168px;left:100px;width:45em;"
+                                              id="draggable44">
+                                             <ul>
+
+
+                                                 <table ng-click="calc()">
+                                                     <thead>
+                                                     <tr>
+                                                         <th>Наименование</th>
+                                                         <th>Колиичество</th>
+                                                         <th>размерность</th>
+                                                         <th>Цена</th>
+                                                         <th>Сумма</th>
+                                                     </tr>
+                                                     </thead>
+
+                                                     <tbody>
+                                                     <tr>
+                                                         <td>Труба грунтового контура</td>
+                                                         <td><a href="#" editable-text="truba">{{truba}}</a></td>
+                                                         <td>м</td>
+                                                         <td><a href="#" editable-text="pipeCost">{{pipeCost}}</a></td>
+                                                         <td>{{truba*pipeCost | number:0}} euro</td>
+                                                     </tr>
+                                                     <tr>
+                                                         <td>Незамерзающая жидкость</td>
+                                                         <td><a href="#" editable-text="rassol">{{rassol}}</a></td>
+                                                         <td>л</td>
+                                                         <td><a href="#" editable-text="glicCost">{{glicCost}}</a></td>
+                                                         <td>{{rassol * glicCost | number:0}}euro</td>
+                                                     </tr>
+                                                     <tr>
+                                                         <td>Бурение скважин</td>
+                                                         <td><a href="#" editable-text="burenie">{{burenie}}</a></td>
+                                                         <td>м</td>
+                                                         <td><a href="#" editable-text="burCost">{{burCost}}</a></td>
+                                                         <td>{{burenie * burCost | number:0}} euro</td>
+                                                     </tr>
+                                                     <tr>
+                                                         <td>Обвязочные материаллы</td>
+                                                         <td></td>
+                                                         <td></td>
+                                                         <td>комплект</td>
+                                                         <td><a href="#"
+                                                                editable-text="materialuBur">{{materialuBur}}</a> euro
+                                                         </td>
+                                                     </tr>
+                                                     <tr>
+                                                         <td>Работы</td>
+                                                         <td></td>
+                                                         <td></td>
+                                                         <td>комплект</td>
+                                                         <td><a href="#" editable-text="rabotaBur">{{rabotaBur}}</a>
+                                                             euro
+                                                         </td>
+                                                     </tr>
+                                                     <thead>
+                                                     <tr>
+                                                         <th>Всего грунтовой конутр</th>
+                                                         <th></th>
+                                                         <th></th>
+                                                         <th></th>
+                                                         <th>{{ GeoVertPrice | number:0}} euro</th>
+                                                     </tr>
+                                                     </thead>
+                                                     </tbody>
+                                                 </table>
+
+
+                                             </ul>
+                                         </div>
+
+
+                                     </div>
+
+                                 </div>
+
+
+
+
+
+
+
+
+
+
+                        </span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">place</i>Горизонтадьный
+                            коллектор<span class="badge">миллион  euro</span></div>
+                        <div class="collapsible-body"><span>Это явно не то что Вам нужно. Обратите внимание на пункт выше.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">whatshot</i>Вода-вода<span
+                                class="badge">миллиард  euro</span></div>
+                        <div class="collapsible-body"><span>Я смотрю Вы смельчак! Ну что ж,это Ваш выбор... Но и считайте тогда сами такую систему!</span>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+        </li>
+
+    </ul>
+
+
+
+
+
+
+
+
+    <div>
+        <div id="page6-div" style="position:relative;width:892px;height:1262px;">
+            <img width="892" height="1262" src="img/o_78474e4142f09a2d001.png" alt="background image"/>
+
+            <div>
+                <p style="position:absolute;top:30px;left:500px;white-space:nowrap" class="ft00"
+                   id="draggable45"><a href="#" editable-textarea="prodavec" e-rows="40" e-cols="40">{{prodavec}}</a>&#160;
+                </p>
+
+                <p style="position:absolute;top:80px;left:80px;white-space:nowrap" class="ft00"
+                   id="draggable46">СТОИМОСТЬ СИСТЕМЫ&#160;</p>
+
+                <div style="position:absolute;top:168px;left:100px;width:50em;"
+                     id="draggable47">
+
+                    <table id="spisok">
+                        <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Наимнование</th>
+                            <th>Количество</th>
+                            <th>Цена</th>
+                            <th>Стомость</th>
+
+                        </tr>
+                        </thead>
+                        <tbody id="table">
+
+
+                            <tr>
+                            <td style="width:1em;">1</td>
+                            <td style="width:40em;">F{{system.system.mypump.model }} - {{ system.system.mypump.power }}</td>
+                            <td style="width:1em;"><a href="#" editable-text="col" ng-model="col">{{col || 1}} </a></td>
+                            <td style="width:3em;">{{ system.system.mypump.cost }}</td>
+                            <td style="width:3em;">{{col * system.system.mypump.cost}}</td>
+                           </tr>
+
+
+
+
+                        </tbody>
+
+
+
+
+
+
+                        <tr ng-repeat="Acc in Acces">
+                            <td style="width:1em;/">
+                                <!-- editable username (text with validation) -->
+        <span editable-text="Acc.nomer"  e-form="rowform" onbeforesave="checkName($data, Acc.id)" e-required>
+          {{ Acc.nomer || 'пусто' }}
+        </span>
+                            </td>
+
+
+
+
+                            <td style="width:40em;/">
+                                <!-- editable username (text with validation) -->
+        <span editable-text="Acc.name"  e-form="rowform" onbeforesave="checkName($data, Acc.id)" e-required>
+          {{ Acc.name }}
+        </span>
+                            </td>
+                            <td style="width:1em;">
+                            <!-- editable username (text with validation) -->
+        <span editable-text="Acc.col"  e-form="rowform" onbeforesave="checkName($data, Acc.id)" e-required>
+          {{ Acc.col}}
+        </span>
+                        </td>
+                            <td style="width:3em;">
+                                <!-- editable username (text with validation) -->
+        <span editable-text="Acc.prise"  e-form="rowform" onbeforesave="checkName($data, Acc.id)" e-required>
+          {{ Acc.prise}}
+        </span>
+                            </td><td style="width:3em;">
+                            <!-- editable username (text with validation) -->
+        <span editable-text="Acc.cost"  e-form="rowform" onbeforesave="checkName($data, Acc.id)" e-required>
+          {{ Acc.cost}}
+        </span>
+                        </td>
+
+
+
+
+                            <td style="white-space: nowrap">
+                                <!-- form -->
+                                <form editable-form name="rowform" onbeforesave="saveUser($data, Acc.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == Acc">
+                                    <button style="position:absolute;left:780px;" type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+                                        сохранить
+                                    </button>
+                                    <button style="position:absolute;left:950px;" type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+                                        отменить
+                                    </button>
+                                </form>
+                                <div class="buttons" ng-show="!rowform.$visible">
+
+                                    <button style="position:absolute;left:780px;"  ng-click="rowform.$show()" class="btn btn-primary">редактировать</button>
+                                    <button style="position:absolute;left:990px;"  ng-click="removeAcc($index)" class="btn btn-danger">удалить</button>
+
+                                </div>
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+
+                    <div class="noPrint">
+                    <button class="btn btn-default" ng-click="addAcc()">Добавить строку</button>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{photo}}
+
+
+
+    <div class="fixed-action-btn">
+        <i class="large material-icons" ng-click="printToCart('printSectionId')">print</i>
+    </div>
+
+
+

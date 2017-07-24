@@ -1,0 +1,107 @@
+.main  {
+padding-left: 300px;
+
+}
+
+@media print {
+    .noPrint {
+        display:none;
+    }
+}
+
+.background {
+    padding-top:20px;
+    width:100%;
+    padding-left:20px;
+    height:100%;
+    background-image:url("/img/fon.png");
+
+    /*оформление текста*/
+    color:#FFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:40px;
+}
+
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+
+
+A {
+    color: black; /* Цвет ссылок */
+}
+
+A:visited {
+    color: black; /* Цвет посещенных ссылок */
+}
+
+
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.ft00 {
+    font-size: 20px;
+    font-family: Times;
+    color: #000000;
+}
+
+.ft01 {
+    font-size: 19px;
+    font-family: Times;
+    color: #000000;
+}
+
+.ft02 {
+    font-size: 10px;
+    font-family: Times;
+    color: #000000;
+}
+
+.ft03 {
+    font-size: 19px;
+    font-family: Times;
+    color: #bd1220;
+}
+
+.ft04 {
+    font-size: 13px;
+    font-family: Times;
+    color: #000000;
+}
+
+.ft05 {
+    font-size: 13px;
+    font-family: Times;
+    color: #000000;
+}
+
+.ft06 {
+    font-size: 20px;
+    font-family: Times;
+    color: #000000;
+}
+
+.ft07 {
+    font-size: 13px;
+    line-height: 25px;
+    font-family: Times;
+    color: #000000;
+}
+
+.ft08 {
+    font-size: 13px;
+    line-height: 23px;
+    font-family: Times;
+    color: #000000;
+}
+
+.ft09 {
+    font-size: 13px;
+    line-height: 21px;
+    font-family: Times;
+    color: #000000;
+}

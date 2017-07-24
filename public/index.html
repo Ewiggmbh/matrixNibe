@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="SHORTCUT ICON" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href="/#/"/>
+    <meta charset="utf-8">
+    <title>matrix</title>
+
+    <script type="text/javascript" src="dpd.js"></script>
+    <link href="js/vendor/nouislider/jquery.nouislider.css" rel="stylesheet">
+    <link href="js/vendor/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+    <link href="js/vendor/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="css/app.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+</head>
+
+<body>
+
+
+
+<div ng-include="'tpl/header.html'"></div>
+     <div ui-view>
+     </div>
+
+<script src="js/vendor/requirejs/require.js" data-main="js/main.js"></script>
+
+</body>
+
+</html>
+
+

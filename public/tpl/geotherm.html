@@ -1,0 +1,174 @@
+
+
+
+
+
+<div class="progress">
+    <div class="indeterminate"></div>
+</div>
+
+
+
+<ul id="slide-out" class="side-nav fixed">
+
+
+
+    <p> Выбор диапазона мощности теплового насоса
+        <input type="text" id="power" readonly>
+    </p>
+    <div id="slider-range" ng-mousemove="changePower($event)"></div>
+
+    <p> Выбор диапазона стоимости теплового насоса
+        <input type="text" id="price" readonly>
+    </p>
+    <div id="slider-range2" ng-mousemove="changePower($event)"></div>
+
+
+
+
+
+
+
+    <form>
+        <div ng-controller="modelCtrl">
+
+
+
+            <div class="input-field col s12 m6 l6">
+
+                <select name="singleSelect" ng-model="sort" ng-mouseleave="changePump()">
+                    <option value="2">Сортировать по мощности</option>
+                    <option value="1">Сортировать по цене</option>
+                    <option value="3">Сортировать по алфавиту</option>
+                </select>
+
+
+            </div>
+
+
+            <div>
+                <p>
+                    <input type="checkbox" id="WaterHeater" onclick="Materialize.showStaggeredList('#staggered-test')" ng-model="WaterHeater" ng-checked="BoilerR" ng-disabled="twocompressor" ng-change="changePump()"/>
+                    <label for="WaterHeater">Имеет встроенный бойлер     </label>
+                </p>
+                <p>
+                    <input type="checkbox" id="onefase" ng-model="onefase" ng-disabled="cheap+twocompressor" ng-change="changePump()"/>
+                    <label for="onefase">Однофазный</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="BuiltInPC" ng-model="BuiltInPC" ng-disabled="cheap+twocompressor" ng-change="changePump()"/>
+                    <label for="BuiltInPC">Имеет встроенный модуль пассивного охлаждения     </label>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    <input type="checkbox" id="BoilerR" ng-model="BoilerR"  ng-disabled="cheap+twocompressor" ng-change="changePump()"/>
+                    <label for="BoilerR">Встроенный бойлер выполнен с нержавеющей стали     </label>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    <input type="checkbox" id="Invertor" ng-model="Invertor" ng-disabled="cheap+twocompressor" ng-change="changePump()"/>
+                    <label for="Invertor">Инверторный компрессор     </label>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    <input type="checkbox" id="twocompressor" ng-model="twocompressor" ng-disabled="WaterHeater+cheap+Invertor+BoilerR+onefase+BuiltInPC" ng-change="changePump()"/>
+                    <label for="twocompressor">Два компрессора (большие мощности от 24 кВт)     </label>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <input type="checkbox" id="cheap" ng-model="cheap" ng-disabled="twocompressor+Invertor+BoilerR+onefase+BuiltInPC" ng-change="changePump()"/>
+                    <label for="cheap">Бюджетная модель (до 12 кВт)     </label>
+                </p>
+            </div>
+
+
+        </div>
+    </form>
+    {{curentPumpp}}
+    <div id="droppable" class="ui-widget-header">
+
+        <p>Перетащите сюда тепловой насос</p><i class="large material-icons">shopping_cart</i>
+    </div>
+
+
+</ul>
+
+
+
+
+<div class="main">
+
+
+
+
+
+
+
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1" id="spisok">список</a></li>
+            <li><a href="#tabs-2"id="carus">карусель</a></li>
+        </ul>
+        <div id="tabs-1">
+
+
+            {{info}}
+
+
+            <div id="cell-container">
+                <div class="cell draggable" ng-repeat="hp in geo">
+                    <div class="collection">
+                        <a ng-href="/#/heatpump/{{ hp.id }}" ng-mousedown="pleaseMe($index)"  id="{{$index}}" class="collection-item">NIBE F<span class="hide">{{hp.id}}</span> <span>{{ hp.model }}</span> - {{ hp.power }}
+                            <div class="chip" class="ng-hide" ng-show="hp.waterHeater == true">бойлер 180 л</div>
+                            <div class="chip" class="ng-hide" ng-show="hp.boilerR == true">бойлер с нержавейки</div>
+                            <div class="chip" class="ng-hide" ng-show="hp.onefase == true">220 В</div>
+                            <div class="chip" class="ng-hide" ng-show="hp.builtInPC == true">PC</div>
+                            <div class="chip" class="ng-hide" ng-show="hp.invertor == true">invertor</div>
+                            <div class="chip" class="ng-hide" ng-show="hp.cheap == true">бюджетный</div>
+                            <div class="chip" class="ng-hide" ng-show="hp.twocompressor == true">двухкомпрессорный</div>
+
+                           <!-- <div class="chip blue-text hide" id="p{{$index}}">перетащите меня в корзину</div>-->
+                            <span class="badge">{{ hp.cost }}  euro</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tabs-2">
+            <div class="carousel">
+                <div class="carousel-item"  ng-repeat="hp in geo">
+                    <a ng-href="/#/heatpump/{{ hp.id }}" class="collection-item">F {{ hp.model }} - {{ hp.power }} - {{hp.cost}} euro
+                        <a class="ng-hide" ng-show="hp.boilerR == true">R</a>
+                    <a class="ng-hide" ng-show="hp.onefase == true">220 В</a>
+                    <a class="ng-hide" ng-show="hp.builtInPC == true">PC</a>
+                    <img src="img/{{ hp.model }}.png"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="fixed-action-btn hide" id="show">
+        <a ng-href="/#/heatpump/{{ curentPump }}" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+<!-- end of ground.html -->
+

@@ -1,0 +1,121 @@
+<div class="container">
+
+<br>
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+
+
+            <p class="flow-text">Здесь Вы можете ознакомится с выбранным тепловым насосом для того чтобы убедится в правильности выбора. Жмите на плюсик если хотите перейти к конфигуратору системы </p><br>
+    <p class="flow-text">Геотермальный тепловой насос NIBE F {{  pump.model }} - {{ pump.power}} </p>
+    <p>Розничная стоимость <a href="#" editable-text="pump.cost">{{ pump.cost || "empty" }}</a> - euro </p>
+
+
+            <br><br><br><br><br><br><br>
+
+            <div class="rov">
+                <div class="col s6 m6 l6">
+            <div>
+                <img alt="" width="70%"
+                     src="img/{{ pump.model }}.hd.jpg">
+            </div>
+                </div>
+
+
+
+
+                <div class="col s6 m6 l6">
+
+                    <div ng-repeat="punkt in description[0].seconddescription" >
+                        <ul>
+                            <li class="italic">
+                                &bull;{{punkt}}
+
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div ng-repeat="desc in description[0].maindescription" class="ligth italic" >
+                <ul>
+                    <li>
+                        {{desc}}
+                    </li>
+                </ul>
+
+            </div>
+
+
+    <div class="chip" class="ng-hide" ng-show="pump.waterHeater == true">бойлер 180 л</div>
+    <div class="chip" class="ng-hide" ng-show="pump.boilerR == true">бойлер с нержавейки</div>
+    <div class="chip" class="ng-hide" ng-show="pump.onefase == true">220 В</div>
+    <div class="chip" class="ng-hide" ng-show="pump.builtInPC == true">PC</div>
+    <div class="chip" class="ng-hide" ng-show="pump.invertor == true">invertor</div>
+    <div class="chip" class="ng-hide" ng-show="pump.cheap == true">бюджетный</div>
+    <div class="chip" class="ng-hide" ng-show="pump.twocompressor == true">двухкомпрессорный</div>
+    <div class="chip" class="ng-hide" ng-show="pump.cheap == false">Подключение к NIBE UPLINK</div>
+
+
+    <div class="fixed-action-btn">
+    <a href="/#/system/{{ id }}" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+
+        </div>
+
+    <table>
+    <thead>
+    <tr>
+        <th data-field="id">Название</th>
+        <th data-field="name">Значение</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>COP при 0/35</td>
+        <td>{{ pump.cop035}}</td>
+    </tr>
+    <tr>
+        <td>Электрическая мощность при 0/35</td>
+        <td> {{ pump.electric035}} кВт</td>
+    </tr>
+    <tr>
+        <td>Мощность тепловая при 0/35</td>
+        <td>{{ pump.power035}} кВт</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+</div>
+
+    </div>
+
+</div>
+
+
+{{userdesc}}

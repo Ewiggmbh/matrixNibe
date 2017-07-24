@@ -1,0 +1,45 @@
+{
+	"type": "Collection",
+	"properties": {
+		"model": {
+			"name": "model",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "model",
+			"order": 0
+		},
+		"price": {
+			"name": "price",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "price",
+			"order": 1
+		},
+		"descriptionua": {
+			"name": "descriptionua",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "descriptionua",
+			"order": 2
+		},
+		"descriptionru": {
+			"name": "descriptionru",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "descriptionru",
+			"order": 3
+		},
+		"workprice": {
+			"name": "workprice",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "workprice",
+			"order": 4
+		}
+	}
+}

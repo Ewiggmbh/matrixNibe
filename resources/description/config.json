@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"model": {
+			"name": "model",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "model",
+			"order": 0
+		},
+		"maindescription": {
+			"name": "maindescription",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "maindescription",
+			"order": 1
+		},
+		"seconddescription": {
+			"name": "seconddescription",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "seconddescription",
+			"order": 2
+		}
+	}
+}

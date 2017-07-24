@@ -1,0 +1,149 @@
+{
+	"type": "Collection",
+	"properties": {
+		"model": {
+			"name": "model",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "model",
+			"order": 0
+		},
+		"power": {
+			"name": "power",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "power",
+			"order": 1
+		},
+		"materialcost": {
+			"name": "materialcost",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "materialcost",
+			"order": 2
+		},
+		"workprice": {
+			"name": "workprice",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "workprice",
+			"order": 3
+		},
+		"class": {
+			"name": "class",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "class",
+			"order": 4
+		},
+		"accessorize": {
+			"name": "accessorize",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "accessorize",
+			"order": 5
+		},
+		"builtInPC": {
+			"name": "builtInPC",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "builtInPC",
+			"order": 6
+		},
+		"power035": {
+			"name": "power035",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "power035",
+			"order": 7
+		},
+		"electric035": {
+			"name": "electric035",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "electric035",
+			"order": 8
+		},
+		"cop035": {
+			"name": "cop035",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "cop035",
+			"order": 9
+		},
+		"onefase": {
+			"name": "onefase",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "onefase",
+			"order": 10
+		},
+		"cost": {
+			"name": "cost",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "cost",
+			"order": 11
+		},
+		"typeOfSource": {
+			"name": "typeOfSource",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "typeOfSource",
+			"order": 12
+		},
+		"waterHeater": {
+			"name": "waterHeater",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "waterHeater",
+			"order": 13
+		},
+		"invertor": {
+			"name": "invertor",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "invertor",
+			"order": 14
+		},
+		"twocompressor": {
+			"name": "twocompressor",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "twocompressor",
+			"order": 15
+		},
+		"boilerR": {
+			"name": "boilerR",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "boilerR",
+			"order": 16
+		},
+		"cheap": {
+			"name": "cheap",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "cheap",
+			"order": 17
+		}
+	}
+}

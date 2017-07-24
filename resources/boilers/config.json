@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"model": {
+			"name": "model",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "model",
+			"order": 0
+		},
+		"cost": {
+			"name": "cost",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "cost",
+			"order": 1
+		},
+		"description": {
+			"name": "description",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "description",
+			"order": 2
+		},
+		"haracteristiki": {
+			"name": "haracteristiki",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "haracteristiki",
+			"order": 3
+		}
+	}
+}

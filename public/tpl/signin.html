@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12 center">
+            <h1 class="thin">
+               Login to start control
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <form class="col offset-s3 s6" ng-submit="signin(user)">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="login-username"
+                           type="email"
+                           placeholder="email"
+                           ng-model="user.name"
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                           class="validate">
+                    <label for="login-username">
+                        email
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="login-password"
+                           ng-model="user.password"
+                           placeholder="password"
+                           type="password"
+                           class="validate">
+                    <label for="login-password">
+                       password
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <button type="submit"
+                            class="waves-effect waves-light btn btn-large blue col s12"
+                            ng-disabled="!user.password.length || !user.name.length">
+                        sign in
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

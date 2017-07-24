@@ -1,0 +1,13 @@
+{
+	"type": "Collection",
+	"properties": {
+		"system": {
+			"name": "system",
+			"type": "object",
+			"typeLabel": "object",
+			"required": false,
+			"id": "system",
+			"order": 0
+		}
+	}
+}
